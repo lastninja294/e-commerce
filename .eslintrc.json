@@ -1,0 +1,31 @@
+{
+  "parser": "@babel/eslint-parser",
+  "plugins": ["react", "import"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "prefer-const": "warn",
+    "indent": [
+      "warn",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "single"],
+    "jsx-quotes": ["warn", "prefer-double"],
+    "import/order": [
+      2,
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "always-and-inside-groups"
+      }
+    ]
+  }
+}
