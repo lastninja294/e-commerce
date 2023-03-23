@@ -1,6 +1,7 @@
 {
   "parser": "@babel/eslint-parser",
   "plugins": ["react", "import"],
+  "extends": ["plugin:react/recommended"],
   "rules": {
     "no-unused-vars": "warn",
     "no-console": "warn",
@@ -13,7 +14,7 @@
       }
     ],
     "semi": ["warn", "always"],
-    "quotes": ["warn", "single"],
+    "quotes": ["warn", "double"],
     "jsx-quotes": ["warn", "prefer-double"],
     "import/order": [
       2,
