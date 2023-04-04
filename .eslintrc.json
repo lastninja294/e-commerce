@@ -3,7 +3,7 @@
   "plugins": ["react", "import"],
   "extends": ["plugin:react/recommended"],
   "rules": {
-    "no-unused-vars": "warn",
+    "no-unused-vars": "error",
     "no-console": "warn",
     "prefer-const": "warn",
     "indent": [

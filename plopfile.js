@@ -11,44 +11,39 @@ module.exports = (plop) => {
     actions: [
       {
         type: "add",
-        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.module.scss",
+        path: "src/Components/{{pascalCase name}}/{{pascalCase name}}.module.scss",
       },
       {
         type: "add",
-        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.jsx",
+        path: "src/Components/{{pascalCase name}}/index.jsx",
         templateFile: "plop-templates/Component.jsx.hbs",
       },
       {
         type: "append",
-        path: "src/components/index.js",
+        path: "src/Components/index.js",
         templateFile: "plop-templates/index.cjs.hbs",
       },
     ],
   });
-    plop.setGenerator("page", {
-      description: "Create a page",
-      prompts: [
-        {
-          type: "input",
-          name: "name",
-          message: "Page name ?",
-        },
-      ],
-      actions: [
-        {
-          type: "add",
-          path: "src/pages/{{pascalCase name}}/{{pascalCase name}}.module.scss",
-        },
-        {
-          type: "add",
-          path: "src/pages/{{pascalCase name}}/{{pascalCase name}}.jsx",
-          templateFile: "plop-templates/Component.jsx.hbs",
-        },
-        {
-          type: "append",
-          path: "src/components/index.js",
-          templateFile: "plop-templates/index.cjs.hbs",
-        },
-      ],
-    });
+  plop.setGenerator("page", {
+    description: "Create a page",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "Page name ?",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "src/Pages/{{pascalCase name}}/{{pascalCase name}}.module.scss",
+      },
+      {
+        type: "add",
+        path: "src/Pages/{{pascalCase name}}/index.js",
+        templateFile: "plop-templates/Component.jsx.hbs",
+      },
+    ],
+  });
 };
