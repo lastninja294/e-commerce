@@ -34,7 +34,6 @@ mock.onGet("/api/ecommerce/orders").reply((request) => {
     );
   }
 
-  console.log("(page - 1) ==>", search, page, orders.length);
   return [
     200,
     {
