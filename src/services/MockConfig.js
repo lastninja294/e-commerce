@@ -1,5 +1,5 @@
-import axios from './ApiConfig';
+import axios from "./ApiConfig";
 
-const MockAdapter = require('axios-mock-adapter');
+const MockAdapter = require("axios-mock-adapter");
 
-export default new MockAdapter(axios, {delayResponse: 200});
+export default new MockAdapter(axios, { delayResponse: 200 });
