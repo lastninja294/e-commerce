@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout as AntdLayout, Space } from "antd";
+import { Layout as AntdLayout } from "antd";
 
 import Nav from "@/Components/Layout/Nav";
 import Footer from "@/Components/Layout/Footer";

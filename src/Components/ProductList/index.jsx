@@ -1,10 +1,9 @@
-import React from 'react'
-import styles from "./ProductList.module.scss"
+import React from "react";
+
+// import styles from "./ProductList.module.scss"
 
 function ProductList() {
-  return (
-    <div>ProductList</div>
-  )
+  return <div>ProductList</div>;
 }
 
-export default ProductList
+export default ProductList;

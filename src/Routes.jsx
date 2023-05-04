@@ -2,11 +2,11 @@ import React from "react";
 import { useRoutes, Outlet } from "react-router-dom";
 
 import Home from "@/Pages/Home";
-import About from "./Pages/About";
-import Cart from "./Pages/Cart";
-import ProductDetails from "./Components/ProductDetails";
-import WishList from "./Pages/WishList";
-import ErrorPage from "./Pages/ErrorPage";
+import About from "@/Pages/About";
+import Cart from "@/Pages/Cart";
+import ProductDetails from "@/Components/ProductDetails";
+import WishList from "@/Pages/WishList";
+import ErrorPage from "@/Pages/ErrorPage";
 
 export default function Routes() {
   const RouteList = useRoutes([

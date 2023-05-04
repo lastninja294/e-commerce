@@ -1,10 +1,9 @@
-import React from 'react'
-import styles from "./Loader.module.scss"
+import React from "react";
+
+// import styles from "./Loader.module.scss";
 
 function Loader() {
-  return (
-    <div>Loader</div>
-  )
+  return <div>Loader</div>;
 }
 
-export default Loader
+export default Loader;

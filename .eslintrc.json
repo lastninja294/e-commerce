@@ -3,6 +3,7 @@
   "plugins": ["react", "import"],
   "extends": ["plugin:react/recommended"],
   "rules": {
+    "react/prop-types": "off",
     "no-unused-vars": "error",
     "no-console": "warn",
     "prefer-const": "warn",
@@ -13,7 +14,6 @@
         "SwitchCase": 1
       }
     ],
-    "semi": ["warn", "always"],
     "quotes": ["warn", "double"],
     "jsx-quotes": ["warn", "prefer-double"],
     "import/order": [

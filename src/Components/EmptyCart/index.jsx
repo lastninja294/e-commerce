@@ -1,10 +1,9 @@
-import React from 'react'
-import styles from "./EmptyCart.module.scss"
+import React from "react";
+
+// import styles from "./EmptyCart.module.scss";
 
 function EmptyCart() {
-  return (
-    <div>EmptyCart</div>
-  )
+  return <div>EmptyCart</div>;
 }
 
-export default EmptyCart
+export default EmptyCart;
