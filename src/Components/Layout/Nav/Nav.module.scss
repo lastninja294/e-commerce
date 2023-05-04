@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .menuList {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  .active {
+    color: #91caff !important;
+  }
+}

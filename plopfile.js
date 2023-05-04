@@ -18,11 +18,6 @@ module.exports = (plop) => {
         path: "src/Components/{{pascalCase name}}/index.jsx",
         templateFile: "plop-templates/Component.jsx.hbs",
       },
-      {
-        type: "append",
-        path: "src/Components/index.js",
-        templateFile: "plop-templates/index.cjs.hbs",
-      },
     ],
   });
   plop.setGenerator("page", {
