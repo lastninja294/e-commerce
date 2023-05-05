@@ -7,10 +7,6 @@ import cat2 from "@/assests/cat2.webp";
 import cat3 from "@/assests/cat3.webp";
 import cat4 from "@/assests/cat4.webp";
 
-import img1 from "@/assests/img1.webp";
-import img2 from "@/assests/img2.webp";
-import img3 from "@/assests/img3.webp";
-
 export const categories = [
   {
     img: cat1,
@@ -40,11 +36,7 @@ export const menus = [
     id: 1,
     path: "/",
   },
-  {
-    name: "About Us",
-    id: 2,
-    path: "/about",
-  },
+
   {
     name: "WishList",
     id: 3,
@@ -69,18 +61,15 @@ export const STATUS = Object.freeze({
 
 export const sliderItems = [
   {
-    id: 1,
+    key: 1,
     caption: "All the Lastest Product In One Place",
-    img: img1,
   },
   {
-    id: 2,
+    key: 2,
     caption: "Grab the Lastest Product",
-    img: img2,
   },
   {
-    id: 3,
+    key: 3,
     caption: "Find All Your Needs In One Place",
-    img: img3,
   },
 ];
