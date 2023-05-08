@@ -6,7 +6,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 
 import styles from "./ProductCard.module.scss";
 
-import { addToCart } from "@/Redux/features/Cart/CartSlice";
+import { addToCart, removeFromCart } from "@/Redux/features/Cart/CartSlice";
 import {
   addToWishList,
   removeFromWishList,
@@ -18,14 +18,13 @@ function ProductCard({ product }) {
   const { id, image, title, price, isLoading } = product;
   const dispatch = useDispatch();
 
-  const state = useSelector((state) => state.wishlist.wishList).some(
+  const isLiked = useSelector((state) => state.wishlist.wishList).some(
     (p) => p?.id === id
   );
 
-  const addProduct = () => {
-    dispatch(addToCart(product));
-    message.success("Product successfully added to cart", 2);
-  };
+  const inCart = useSelector((state) => state.cart.cart).some(
+    (p) => p?.id === id
+  );
 
   return (
     <Card
@@ -41,18 +40,30 @@ function ProductCard({ product }) {
       actions={[
         <AiFillHeart
           key="like"
-          color={state ? "red" : "inherit"}
+          color={isLiked ? "red" : "inherit"}
           type="fill"
           size={20}
           onClick={() => {
-            if (!state) {
+            if (!isLiked) {
               dispatch(addToWishList(product));
             } else {
               dispatch(removeFromWishList(product));
             }
           }}
         />,
-        <BsFillCartPlusFill key="cart" size={20} onClick={addProduct} />,
+        <BsFillCartPlusFill
+          key="cart"
+          size={20}
+          onClick={() => {
+            if (!inCart) {
+              dispatch(addToCart(product));
+              message.success("Product successfully added to cart", 2);
+            } else {
+              dispatch(removeFromCart(product));
+              message.success("Product successfully removed from cart", 2);
+            }
+          }}
+        />,
       ]}
     >
       <Meta title={title} description={`This product's price is : ${price}$`} />

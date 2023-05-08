@@ -1,6 +1,6 @@
 import React from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Badge } from "antd";
+
+import CartCount from "@/Components/CartCount";
 
 import cat1 from "@/assests/cat1.webp";
 import cat2 from "@/assests/cat2.webp";
@@ -45,19 +45,9 @@ export const menus = [
   {
     id: 4,
     path: "/cart",
-    icon: (
-      <Badge size="small" count={1}>
-        <AiOutlineShoppingCart size={20} />
-      </Badge>
-    ),
+    icon: <CartCount />,
   },
 ];
-
-export const STATUS = Object.freeze({
-  IDLE: "idle",
-  LOADING: "loading",
-  ERROR: "error",
-});
 
 export const sliderItems = [
   {
